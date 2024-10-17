@@ -1,0 +1,36 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider-image {
+    display: none;
+}
+
+.slider-image.active {
+    display: block;
+}
+
+.bg-custom {
+    background-color: #206395;
+    color: white;
+}
+
+.bg-custom-light {
+    background-color: #98b9cb;
+}
+
+.team-member {
+    transition: transform 0.2s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.filter-section {
+    margin-bottom: 30px;
+}

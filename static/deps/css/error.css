@@ -1,0 +1,30 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.error-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #206395;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.btn-primary {
+    background-color: #206395;
+    border: none;
+}
