@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock %}
+
+{% block modal_cart %}
+{% include "includes/cart_button.html" %}
+{% endblock  %}
+
+{% block content %}
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center text-primary mb-4">Contact Us</h2>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4 class="text-primary">Our Location</h4>
+                    <p>123 Freezer Avenue, Iceberg City, Snowland 12345</p>
+                    <p><i class="fas fa-phone"></i> Phone: +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@freezerstore.com</p>
+                    <h5 class="mt-4 text-primary">Working Hours</h5>
+                    <ul class="list-unstyled">
+                        <li>Monday - Friday: 9 AM - 6 PM</li>
+                        <li>Saturday: 10 AM - 4 PM</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                    <h5 class="mt-4 text-primary">Follow Us</h5>
+                    <a href="#" class="text-dark"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-dark ml-3"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-dark ml-3"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+                <img src="..." class="img-fluid" alt="...">
+            </div>
+
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer %}
+<footer class="bg-custom py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 Freezer Store. All rights reserved.</p>
+    </div>
+</footer>
+{% endblock %}
+

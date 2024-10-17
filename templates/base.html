@@ -1,0 +1,63 @@
+{% load static %}
+{% load cache %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Морозко</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "deps/css/styles.css" %}">
+    {% block css %}
+
+    {% endblock %}
+</head>
+
+<body class="bg-light">
+
+   <!-- Header -->
+   {% block header %}{% endblock %}
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-primary font-weight-bold" href="{% url "main:index" %}">Морозко</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link text-dark" href="{% url "main:index" %}">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="{% url "main:contacts" %}">Контакты</a></li>
+                </ul>
+                <div class="ml-3">
+                    <!-- <a href="#" class="text-dark"><i class="fas fa-search"></i></a> -->
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Найти" aria-label="Search">
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    {% block footer %}{% endblock %}
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
